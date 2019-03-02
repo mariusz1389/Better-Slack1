@@ -6,6 +6,6 @@ public class ClientTestClass {
 
         ClientExample clientExample = new ClientExample();
 
-        clientExample.connectToServer("localhost",60000);
+        clientExample.connectToServer("192.168.1.74",55555);
     }
 }

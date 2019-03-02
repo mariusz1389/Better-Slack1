@@ -7,5 +7,5 @@ public class GreeterDemo {
         thread2.start();
     }
 
-    
+
 }
