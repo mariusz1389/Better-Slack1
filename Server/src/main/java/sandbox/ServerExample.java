@@ -1,3 +1,5 @@
+package sandbox;
+
 import sun.net.www.protocol.ftp.FtpURLConnection;
 
 import java.io.BufferedReader;
