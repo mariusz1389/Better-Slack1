@@ -1,3 +1,5 @@
+package sandbox;
+
 public class Purchase {
     private  String productName;
 

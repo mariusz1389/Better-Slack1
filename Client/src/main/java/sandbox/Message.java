@@ -1,5 +1,11 @@
+package sandbox;
+
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
+@Getter @Setter
 public class Message {
     private LocalDateTime timestamp;
     private String content;
@@ -7,6 +13,7 @@ public class Message {
     /**
      * Used by frameworks
      */
+
     private Message() {
     }
 
@@ -20,11 +27,5 @@ public class Message {
         this.content = content;
     }
 
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
 
-    public String getContent() {
-        return content;
-    }
 }
