@@ -1,0 +1,12 @@
+{
+  "name": "John",
+  "lastName": "Smith",
+  "age": 30,
+  "purchases": [
+    {
+      "productName": "laptop",
+      "price": 5234.99
+    }
+  ],
+  "integers": [1, 2, 3]
+}
