@@ -7,17 +7,17 @@
 //public class InMemoryUserDatabaseTest {
 //
 //
-//    private InMemoryUserDatabase userInMemoryDatabase;
+//    private users.InMemoryUserDatabase userInMemoryDatabase;
 //
 //    @Before
 //    public void setUp() {
-//        InMemoryUserDatabase = new InMemoryUserDatabase();
+//        users.InMemoryUserDatabase = new users.InMemoryUserDatabase();
 //    }
 //
 //    @Test
 //    public void addingOneUserShouldIncreaseTheAmountOfUsers() {
 //        // Given
-//        User user = new User("ASD", "sadasdas", "sad@asfaf.pl",
+//        users.User user = new users.User("ASD", "sadasdas", "sad@asfaf.pl",
 //                20, Sex.MALE);
 //
 //
@@ -32,7 +32,7 @@
 //    public void addingOneUserShouldIncreaseTheAmountOfUsersNegative() {
 //        // Given
 //        userInMemoryDatabase = new UserInMemoryDatabase();
-//        User user = new User("ASD", "sadasdas", "sad@asfaf.pl",
+//        users.User user = new users.User("ASD", "sadasdas", "sad@asfaf.pl",
 //                20, Sex.MALE);
 //
 //
@@ -57,7 +57,7 @@
 //    @Test
 //    public void addingShouldNotBePossibleWhenTheUserIsNull() {
 //        // Given
-//        User user = null;
+//        users.User user = null;
 //
 //        // When
 //        userInMemoryDatabase.add(user);
@@ -69,12 +69,12 @@
 //    @Test
 //    public void getByIdShouldReturnGivenUserByItsId() {
 //        // Given
-//        User user = new User("ASD", "sadasdas", "sad@asfaf.pl",
+//        users.User user = new users.User("ASD", "sadasdas", "sad@asfaf.pl",
 //                20, Sex.MALE);
 //        userInMemoryDatabase.add(user);
 //
 //        // When
-//        User returnedUser = userInMemoryDatabase.getById(user.getId());
+//        users.User returnedUser = userInMemoryDatabase.getById(user.getId());
 //
 //        // Then
 //        assertSame(user, returnedUser);
@@ -84,12 +84,12 @@
 //    @Test(expected = InvalidStateException.class)
 //    public void ifTheresNoUserWithGivenIdExceptionShouldBeThrown() {
 //        // Given
-//        User user = new User("ASD", "sadasdas", "sad@asfaf.pl",
+//        users.User user = new users.User("ASD", "sadasdas", "sad@asfaf.pl",
 //                20, Sex.MALE);
 //        userInMemoryDatabase.add(user);
 //
 //        // When
-//        User returnedUser = userInMemoryDatabase.getById(UUID.randomUUID());
+//        users.User returnedUser = userInMemoryDatabase.getById(UUID.randomUUID());
 //
 //        // Then
 //        assertNull(returnedUser);
