@@ -1,11 +1,7 @@
 package network;
 
-public interface ChatServer {
-
+public interface ChatServer extends DisconnectObserver {
     void start(int port);
-
     void shutdown();
-
     boolean isOnline();
-
 }
