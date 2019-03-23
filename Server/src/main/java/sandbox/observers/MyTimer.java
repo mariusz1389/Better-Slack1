@@ -1,4 +1,4 @@
-package sandbox.observator;
+package sandbox.observers;
 
 public class MyTimer {
     private boolean running;
