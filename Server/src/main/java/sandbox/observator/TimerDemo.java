@@ -1,4 +1,4 @@
-package Sandbox.observator;
+package sandbox.observator;
 
 import java.util.Scanner;
 

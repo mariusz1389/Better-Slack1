@@ -1,4 +1,4 @@
-package Sandbox.observator;
+package sandbox.observator;
 
 public class CounterDemo {
 

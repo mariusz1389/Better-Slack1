@@ -1,4 +1,4 @@
-package Sandbox;
+package sandbox;
 
 public class Greeter implements Runnable {
     private final String name;

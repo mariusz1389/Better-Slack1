@@ -1,18 +1,13 @@
-package Sandbox;
-
-import sun.net.www.protocol.ftp.FtpURLConnection;
+package sandbox;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 
-public class ServerExample {
-
-
+public class SampleServerContinuousReading {
     private ServerSocket serverSocket;
     private Socket clientSocket;
     private BufferedReader clientInput;
@@ -27,17 +22,17 @@ public class ServerExample {
 
         clientInput = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-        while (!clientSocket.isClosed()) {
+        while(!clientSocket.isClosed()) {
             String receivedMessage = "";
 
             try {
                 receivedMessage = clientInput.readLine();
-            } catch (SocketException ex) {
+            } catch(SocketException ex) {
                 System.out.println("Client has been disconnected");
                 break;
             }
 
-            if (receivedMessage.toLowerCase().equals(EXIT_KEYWORD)) {
+            if(receivedMessage.toLowerCase().equals(EXIT_KEYWORD)) {
                 break;
             }
 
@@ -45,5 +40,3 @@ public class ServerExample {
         }
     }
 }
-
-

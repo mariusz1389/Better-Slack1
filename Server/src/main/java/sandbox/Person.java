@@ -1,4 +1,4 @@
-package Sandbox;
+package sandbox;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Sandbox;
+package sandbox;
 
 public class GreeterDemo {
     public static void main(String[] args) {

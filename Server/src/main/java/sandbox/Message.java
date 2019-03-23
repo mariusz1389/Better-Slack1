@@ -1,4 +1,4 @@
-package Sandbox;
+package sandbox;
 
 import lombok.Getter;
 

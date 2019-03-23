@@ -1,4 +1,4 @@
-package Sandbox;
+package sandbox;
 
 import java.io.IOException;
 import java.net.ServerSocket;
