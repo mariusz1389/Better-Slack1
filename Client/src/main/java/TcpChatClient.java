@@ -30,7 +30,7 @@ public class TcpChatClient implements NetworkBasedChatClient {
             while (isOnline()) {
                 readMessage();
             }
-            System.out.println("Lost connection with the server.");
+            System.out.println("Lost connect with the server.");
         });
         readerThread.start();
     }
@@ -71,6 +71,7 @@ public class TcpChatClient implements NetworkBasedChatClient {
 
     @Override
     public boolean isOnline() {
-        return clientSocket != null && !clientSocket.isClosed();
+        return clientSocket != null &&
+                !clientSocket.isClosed();
     }
 }

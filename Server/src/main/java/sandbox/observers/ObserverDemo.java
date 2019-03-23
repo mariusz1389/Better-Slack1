@@ -18,5 +18,6 @@ package sandbox.observers;
             myTimer.join();
             System.out.println("Main thread exited");
         }
+
     }
 

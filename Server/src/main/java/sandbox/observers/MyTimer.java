@@ -1,6 +1,6 @@
 package sandbox.observers;
 
-public class MyTimer {
+public class MyTimer implements ExitExecutionObserver {
     private boolean running;
     private Thread countingThread;
 
@@ -19,6 +19,7 @@ public class MyTimer {
                 }
                 System.out.println(++counter);
             }
+            System.out.println("Timer thread has finished working.");
         });
         countingThread.start();
     }
@@ -29,5 +30,10 @@ public class MyTimer {
 
     public boolean isRunning() {
         return running;
+    }
+
+    @Override
+    public void exitRequested() {
+        running = false;
     }
 }

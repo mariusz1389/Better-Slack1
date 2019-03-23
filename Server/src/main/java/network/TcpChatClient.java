@@ -14,6 +14,7 @@ public class TcpChatClient implements ChatClient {
     private BufferedReader input;
     private Thread readerThread;
 
+
     private final List<DisconnectObserver> disconnectObservers = new ArrayList<>();
 
     public TcpChatClient(Socket clientSocket) {
@@ -50,7 +51,7 @@ public class TcpChatClient implements ChatClient {
 
             System.out.println(msg);
         } catch (IOException e) {
-            // TBD
+            disconnect();
         }
     }
 

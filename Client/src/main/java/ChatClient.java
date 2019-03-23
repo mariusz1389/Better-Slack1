@@ -1,4 +1,4 @@
 public interface ChatClient {
+    // Marker interface
 
-    //Marker interface
 }
