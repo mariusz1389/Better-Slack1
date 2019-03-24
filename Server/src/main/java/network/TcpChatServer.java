@@ -37,7 +37,7 @@ public class TcpChatServer implements ChatServer {
         while(isOnline()) {
             try {
                 Socket clientSocket = serverSocket.accept();
-                ChatClient client = new TcpChatClient(clientSocket);
+                ChatClient client = new TcpChatClient(clientSocket, channelRepository);
                 client.subscribe(this);
                 onlineUsers.add(client);
                 channelRepository.findByName(ChannelSettings.DEFAULT_CHANNEL_NAME)

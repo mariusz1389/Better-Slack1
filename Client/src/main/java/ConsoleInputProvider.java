@@ -1,3 +1,5 @@
+import exceptions.EmptyMessageException;
+
 import java.util.Scanner;
 
 public class ConsoleInputProvider implements UserInputProvider {
@@ -7,7 +9,7 @@ public class ConsoleInputProvider implements UserInputProvider {
     public ConsoleInputProvider() {
         String tempUsername;
         while(true) {
-            System.out.print("Enter username");
+            System.out.print("Enter username: ");
             tempUsername = scanner.nextLine();
 
             if(isUsernameValid(tempUsername))
@@ -18,12 +20,19 @@ public class ConsoleInputProvider implements UserInputProvider {
 
     @Override
     public String getUserInput() {
-        return String.format("%s: %s", username, scanner.nextLine());
+        String input = scanner.nextLine();
+
+        if(input.trim().isEmpty()) {
+            throw new EmptyMessageException();
+        }
+
+        return String.format("%s: %s", username, input);
     }
 
     private static boolean isUsernameValid(String username) {
         return !username.isEmpty() &&
-                username.length() >= 2 &&
-                username.length() < 15;
+                username.length() >= UserSettings.MIN_USERNAME_LENGTH &&
+                username.length() < UserSettings.MAX_USERNAME_LENGTH &&
+                username.matches(UserSettings.USERNAME_PATTERN);
     }
 }
